@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Leanring D3.JS from pluralsight.com</title>
+</head>
+<body>
+  <h1>Drawing Shapes</h1>
+
+  <h3>SVG Circle</h3>
+  <svg width="50" height="50">
+    <circle cx="25" cy="25" r="25" style="fill:blue" />
+  </svg>
+
+  <h3>D3 Circle</h3>
+  <svg class="d3-circle"></svg>
+
+  <h3>Text</h3>
+  <svg width="250" height="50">
+    <text x="0" y="25">Easy Peasy</text>
+  </svg>
+
+  <svg class="d3-text"></svg>
+
+  <div style="margin-top: 2000px"></div>
+  <script src="js/d3.v5.min.js"></script>
+  <script>
+    d3.select(".d3-circle")
+        .attr("width", 100)
+        .attr("height", 100)
+      .append("circle")
+        .attr("cx", 50)
+        .attr("cy", 50)
+        .attr("r", 50)
+        .style("fill", "purple");
+
+    d3.select(".d3-text")
+      .attr("width", 250)
+      .attr("height", 50)
+      .append("text")
+        .text("Easy Peasy")
+        .attr("x", 0)
+        .attr("y", 25)
+        .style("fill", "blue");
+
+
+  </script>
+</body>
+</html>

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Leanring D3.JS from pluralsight.com</title>
+</head>
+<body>
+  <h1>Drawing Shapes</h1>
+
+  <h3>SVG Bar</h3>
+  <svg>
+    <rect width="50" height="200" style="fill: blue" />
+  </svg>
+
+  <h3>D3 Bar</h3>
+
+  <script src="js/d3.v5.min.js"></script>
+  <script>
+    d3.select("body")
+      .append("svg")
+      .append("rect")
+        .attr("width", 250)
+        .attr("height", 200)
+        .style("fill", "blue");
+
+
+    d3.select("body")
+    .append("div")
+    .attr("style", "margin-top: 2000px");
+  </script>
+</body>
+</html>
